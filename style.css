@@ -1,11 +1,14 @@
+/* Don't add any other thing to it */
 * {
     box-sizing: border-box;
-    background-color: antiquewhite;
+   
 }
 
 body {
     padding: 0;
     margin: 0;
+    /* This should only be the color of the background, place here */
+    background-color: antiquewhite;  
 }
 
 header {
@@ -17,7 +20,7 @@ header {
 }
 
 div {
-    border: 2px rgb(112, 107, 107) solid;
+    border: 2px antiquewhite;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -94,6 +97,76 @@ main > h1 {
     display: flex;
     flex-direction: column;
   }
+  #list-items {
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image-container > img {
+    background-blend-mode: multiply;
+
+}
+
+.checklist-item {
+    position: absolute;
+    top: 50%; /* Adjust these values as needed to position the checklist */
+    left: 50%; /* Adjust these values as needed to position the checklist */
+    transform: translate(-50%, -50%); /* Center the checklist item */
+    padding: 0px; /* Add some padding around the checklist item */
+    border-radius: 1px; /* Add rounded corners to the checklist item */
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.checklist-item {
+    position: absolute;
+    top: 50%; /* Adjust these values as needed to position the checklist */
+    left: 50%; /* Adjust these values as needed to position the checklist */
+    transform: translate(-50%, -50%); /* Center the checklist item */
+    padding: 90px; /* Add some padding around the checklist item */
+    border-radius: 5px; /* Add rounded corners to the checklist item */
+}
+
+.checklist-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.checklist-item li {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.checklist-item input[type="checkbox"] {
+    margin-right: 5px;
+}
+.checklist-item label {
+    position: relative;
+}
+
+.checklist-item input[type="checkbox"]:checked + label::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: rgb(7, 7, 7);
+    transform: translateY(-50%);
+}
+
+p {
+    
+}
   
 
 footer {
@@ -107,5 +180,3 @@ footer {
     color: rgb(106, 123, 123);
     display: flex;
     justify-content: center;
-    align-items: center;
-}
