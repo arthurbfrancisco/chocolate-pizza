@@ -1,11 +1,14 @@
+/* Don't add any other thing to it */
 * {
     box-sizing: border-box;
-    background-color: antiquewhite;
+   
 }
 
 body {
     padding: 0;
     margin: 0;
+    /* This should only be the color of the background, place here */
+    background-color: antiquewhite;  
 }
 
 header {
@@ -17,7 +20,7 @@ header {
 }
 
 div {
-    border: 2px black solid;
+    border: 2px antiquewhite;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -26,7 +29,7 @@ div {
 }
 
 #headDiv0 {
-    border: 1px blue solid;
+    border: 1px rgb(237, 237, 243) solid;
     flex-flow: row;
 }
 
@@ -48,8 +51,11 @@ header h1 {
     font-size: 3vw;
     font-family: cursive;
     font-weight: bolder;
-    border: 1px purple solid;
+    border: 1px rgb(244, 237, 244) solid;
 }
+.main {
+    margin-bottom: 120px; /* Add some margin to the bottom of the main element to make space for the footer */
+  } 
 
 main {
     width: 960px;
@@ -71,35 +77,103 @@ main > h1 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bolder;
 }
-
-footer {
-    border: 2px blue solid;
-    height: 50px;
-    width: 100%;
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-    font-size: 13px;
-    color: rgb(106, 123, 123);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .vanessa {
     display: flex;
     width: 80%; /* Set a fixed width or max-width as needed */
     margin: auto; /* Center the content horizontally */
   }
+  
   .image-text {
     display: flex; /* Use flexbox to align the image and text content side by side */
     align-items: center; /* Vertically align the content */
     width: 100%; /* Ensure the content takes up the full width of the container */
   }
+  
   .image-text img {
     margin-right: 10px; /* Add some space between the image and the text content */
   }
+  
   .text-content {
     display: flex;
     flex-direction: column;
   }
+  #list-items {
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image-container > img {
+    background-blend-mode: multiply;
+
+}
+
+.checklist-item {
+    position: absolute;
+    top: 50%; /* Adjust these values as needed to position the checklist */
+    left: 50%; /* Adjust these values as needed to position the checklist */
+    transform: translate(-50%, -50%); /* Center the checklist item */
+    padding: 0px; /* Add some padding around the checklist item */
+    border-radius: 1px; /* Add rounded corners to the checklist item */
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.checklist-item {
+    position: absolute;
+    top: 50%; /* Adjust these values as needed to position the checklist */
+    left: 50%; /* Adjust these values as needed to position the checklist */
+    transform: translate(-50%, -50%); /* Center the checklist item */
+    padding: 90px; /* Add some padding around the checklist item */
+    border-radius: 5px; /* Add rounded corners to the checklist item */
+}
+
+.checklist-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.checklist-item li {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.checklist-item input[type="checkbox"] {
+    margin-right: 5px;
+}
+.checklist-item label {
+    position: relative;
+}
+
+.checklist-item input[type="checkbox"]:checked + label::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: rgb(7, 7, 7);
+    transform: translateY(-50%);
+}
+
+  
+
+footer {
+    border: 2px rgb(249, 249, 250) solid;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    position: relative; /* changed from absolute to relative */
+    /* bottom: 0; removed this line */
+    font-size: 13px;
+    color: rgb(106, 123, 123);
+    display: flex;
+    justify-content: center;
